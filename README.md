@@ -1,4 +1,9 @@
-# IMPORTANT! YouTube is the Only Stable Download Function Right Now
+# VSaturn
+
+## Vsaturn is a Universal* Video Downloader with No Ads!
+
+## Youtube, TikTok, And Soundcloud Work Perfectly when tested, Instagram Has Not Been Tested Yet
+## You May Be Able To Paste Links from Other Platforms Into The Link Box, yt-dlp may be able to handle them
 
 ## VSaturn Dependencies
 
