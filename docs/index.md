@@ -17,7 +17,7 @@ Welcome to the official wiki for VSaturn, the all-in-one media downloader for Yo
 
 ## Getting Started
 
-Download the latest release of VSaturn from our [GitHub Releases page](https://github.com/Mandrusian/Mandrusia/releases).
+Download the latest release of VSaturn from our [GitHub Releases page](https://github.com/Mandrusian/VSaturn/releases). {# <--- CHANGED #}
 
 ## Features
 * Download videos and audio from YouTube.
