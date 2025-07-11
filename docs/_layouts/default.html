@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <!-- Explicitly link CSS using absolute path from root of the repo -->
-    <link rel="stylesheet" href="/VSaturn/docs/assets/css/style.css"> {# <--- CHANGED THIS LINE #}
-    <link rel="icon" type="image/png" href="/VSaturn/docs/assets/images/vsaturn.jpg"> {# <--- CHANGED THIS LINE #}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css"> {# <--- Use site.baseurl #}
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/vsaturn.jpg"> {# <--- Use site.baseurl #}
 </head>
 <body>
     {% include header.html %}
