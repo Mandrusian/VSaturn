@@ -1,3 +1,0 @@
-([('YouTube Downloader',
-   '/Users/xavi/Downloads/VLOAD/dist/YouTube Downloader',
-   'EXECUTABLE')],)
