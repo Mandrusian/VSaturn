@@ -1,14 +1,16 @@
+# docs/_config.yml
 title: VSaturn Wiki
 description: The official wiki and documentation for VSaturn Downloader.
 baseurl: "/VSaturn/docs"
 url: "https://Mandrusian.github.io"
 
-# theme: minima # <--- This line was commented out, which is good.
-# Exclude Jekyll-specific files from the final site
+# Jekyll build settings
+markdown: kramdown
+permalink: /:title/
+
+# Exclude files/folders from the site build
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
-markdown: kramdown
-permalink: /:title/
