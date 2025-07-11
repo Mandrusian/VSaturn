@@ -6,37 +6,37 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Very dark background */
-    color: #e0e0e0; /* Light text */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     font-size: 16px;
 }
 
 /* Links */
 a {
-    color: #00a0e0; /* Bright blue for links */
+    color: #00a0e0;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #00c0ff; /* Lighter blue on hover */
+    color: #00c0ff;
     text-decoration: underline;
 }
 
 /* Header Styling - Sleek, Glassy Look */
 header {
-    background-color: rgba(35, 35, 45, 0.95); /* Dark background with slight transparency */
+    background-color: rgba(35, 35, 45, 0.95);
     padding: 15px 30px;
     border-bottom: 1px solid rgba(100, 100, 120, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    position: sticky; /* Make header sticky */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(5px); /* Attempt for blur effect (browser support varies) */
-    -webkit-backdrop-filter: blur(5px); /* Safari/Chrome specific */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .header-content {
@@ -47,10 +47,9 @@ header {
 .header-logo {
     width: 50px;
     height: 50px;
-    border-radius: 12px; /* Rounded corners for the header image */
+    border-radius: 12px;
     margin-right: 15px;
-    /* For true Big Sur squircle, you'd need SVG mask or more complex CSS */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for the logo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
@@ -87,21 +86,21 @@ header nav a:hover {
 /* Main Container Layout */
 .container {
     display: flex;
-    min-height: calc(100vh - 80px); /* Adjust based on header/footer height */
-    max-width: 1400px; /* Max width for content */
-    margin: 20px auto; /* Center the container */
-    border-radius: 15px; /* Overall rounded container */
-    overflow: hidden; /* Important for inner elements not to break outer radius */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for the main body */
+    min-height: calc(100vh - 80px);
+    max-width: 1400px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Sidebar Styling */
 .sidebar {
-    width: 280px; /* Slightly wider sidebar */
-    background-color: rgba(25, 25, 35, 0.9); /* Darker, more opaque sidebar */
+    width: 280px;
+    background-color: rgba(25, 25, 35, 0.9);
     padding: 30px 20px;
     border-right: 1px solid rgba(100, 100, 120, 0.1);
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Shadow to separate from content */
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h3 {
@@ -141,8 +140,8 @@ header nav a:hover {
 .content {
     flex-grow: 1;
     padding: 30px;
-    background-color: rgba(45, 45, 55, 0.8); /* Slightly more transparent for content */
-    border-radius: 0 15px 15px 0; /* Rounded on right side */
+    background-color: rgba(45, 45, 55, 0.8);
+    border-radius: 0 15px 15px 0;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
@@ -168,7 +167,7 @@ header nav a:hover {
     border-radius: 4px;
     font-family: 'Consolas', 'Monaco', monospace;
     font-size: 0.9em;
-    color: #FFD700; /* Gold color for inline code */
+    color: #FFD700;
 }
 
 .content pre {
@@ -181,11 +180,11 @@ header nav a:hover {
 }
 
 .content pre code {
-    display: block; /* Make code block fill pre */
-    background-color: transparent; /* No extra background for code in pre */
+    display: block;
+    background-color: transparent;
     padding: 0;
     border-radius: 0;
-    color: #e0e0e0; /* White for block code */
+    color: #e0e0e0;
 }
 
 /* Footer Styling */
@@ -196,14 +195,14 @@ footer {
     padding: 15px;
     font-size: 0.9em;
     border-top: 1px solid rgba(100, 100, 120, 0.2);
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Specific styling for images within content */
 .content img {
     max-width: 100%;
     height: auto;
-    border-radius: 15px; /* Rounded corners for all content images */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for content images */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin: 15px 0;
 }
