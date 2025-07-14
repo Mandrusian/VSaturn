@@ -1,6 +1,5 @@
-# vsaturn.spec (Updated to NOT bundle ffmpeg)
+# vsaturn.spec (NO bundle ffmpeg)
 
-# -*- mode: python ; coding: utf-8 -*-
 
 block_cipher = None
 
@@ -8,7 +7,7 @@ block_cipher = None
 a = Analysis(
     ['vsaturn_downloader_pyqt.py'],
     pathex=[],
-    binaries=[], # <--- THIS SHOULD NOW BE EMPTY (or contain other binaries if you add them later)
+    binaries=[],
     datas=[
         ('tsmandrusia.jpg', '.'),
         ('vsaturn.jpg', '.')
