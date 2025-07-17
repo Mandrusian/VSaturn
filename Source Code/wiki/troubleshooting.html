@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting - VSaturn Wiki</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/png" href="./assets/images/vsaturn.jpg">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./assets/images/vsaturn.jpg" alt="VSaturn Logo" class="header-logo">
+            <h1><a href="./index.html">VSaturn Wiki</a></h1>
+        </div>
+        <nav>
+            <a href="./troubleshooting.html">Troubleshooting</a>
+            <a href="./other-projects.html">Other Projects</a>
+            <a href="./about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Wiki Pages</h3>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./troubleshooting.html">Troubleshooting</a></li>
+                <li><a href="./other-projects.html">Other Projects</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+
+            <h3>External Links</h3>
+            <ul>
+                <li><a href="https://github.com/Mandrusian/VSaturn" target="_blank">GitHub Repository</a></li>
+                <li><a href="https://mandrusian.github.io/Mandrusia" target="_blank">Mandrusia GitHub Pages</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Troubleshooting Common Errors</h1>
+            <p>This page provides solutions to common issues you might encounter while using VSaturn.</p>
+
+            <h2>IMPORTANT!: ONLY YOUTUBE IS STABLE ON V2.1</h2>
+            
+            <h2>1. "ModuleNotFoundError: No module named 'yt_dlp'"</h2>
+            <p><b>Cause:</b> This usually means the <code>yt-dlp</code> library (or its components) was not correctly bundled with the application.</p>
+            <p><b>Solution:</b></p>
+            <ol>
+                <li>Ensure you have <code>yt-dlp</code> installed in your Python environment (<code>pip install yt-dlp</code>).</li>
+                <li>Perform a clean rebuild of the application using PyInstaller. Navigate to your project directory (where <code>vsaturn.spec</code> is) in Terminal and run:
+                    <pre><code>rm -rf build dist
+pyinstaller "vsaturn.spec"</code></pre>
+                </li>
+                <li>Verify that your <code>vsaturn.spec</code> file explicitly lists <code>yt_dlp</code> and its submodules in the <code>hiddenimports</code> section.</li>
+            </ol>
+
+            <h2>2. "Download Failed: [Specific yt-dlp Error]"</h2>
+            <p><b>Cause:</b> <code>yt-dlp</code> might encounter issues with specific URLs (e.g., age-restricted content, private videos, geo-restrictions, or changes in the platform's website structure).</p>
+            <p><b>Solution:</b></p>
+            <ol>
+                <li><b>Check the URL:</b> Double-check that the URL is correct and publicly accessible.</li>
+                <li><b>Try a different video:</b> See if the issue is specific to that one video or a broader problem.</li>
+                <li><b>Update yt-dlp:</b> The underlying <code>yt-dlp</code> tool is constantly updated. While the bundled app won't auto-update, if you're building it yourself, try updating <code>yt-dlp</code> in your environment and rebuilding the app:
+                    <pre><code>pip install --upgrade yt-dlp</code></pre>
+                </li>
+                <li><b>Check the in-app log:</b> The "Download Log" within the VSaturn application window will often provide more specific error messages from <code>yt-dlp</code>.</li>
+            </ol>
+
+            <h2>3. "Application Crashes on Launch" (No specific error message)</h2>
+            <p><b>Cause:</b> This can be due to various reasons, including missing system dependencies, corrupted app bundle, or fundamental Python/Qt issues.</p>
+            <p><b>Solution:</b></p>
+            <ol>
+                <li><b>Run from Terminal:</b> Open your Mac's Terminal, navigate to the executable inside the app bundle (e.g., <code>dist/VSaturn.app/Contents/MacOS/</code>) and run <code>./VSaturn</code>. Copy any error messages that appear.</li>
+                <li><b>Check Console.app:</b> Open <code>Applications/Utilities/Console.app</code> on your Mac, clear existing logs, try launching the app, and look for new error messages related to "VSaturn" or "Python".</li>
+                <li><b>Perform a Clean Rebuild:</b> This is often the solution for bundling issues. Navigate to your project directory and run:
+                    <pre><code>rm -rf build dist
+pyinstaller "vsaturn.spec"</code></pre>
+                </li>
+            </ol>
+
+            <hr>
+
+            <h2>Reporting New Issues</h2>
+            <p>If you encounter an issue not listed here, please help us by reporting it! Provide as much detail as possible:</p>
+            <ol>
+                <li>The exact URL(s) you were trying to download.</li>
+                <li>The full "Download Log" output from the VSaturn application.</li>
+                <li>A clear description of the steps to reproduce the issue.</li>
+                <li>(Optional) If the app crashes, include any relevant crash reports or messages from <code>Console.app</code>.</li>
+            </ol>
+            <hr>
+            <p><em>Last Updated: July 11, 2025</em></p>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 VSaturn Wiki - Made by Mandrusia. Powered by Static HTML.</p>
+    </footer>
+</body>
+</html>
